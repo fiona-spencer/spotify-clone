@@ -24,8 +24,8 @@ const UploadModal = () => {
         reset
     } = useForm<FieldValues>({
         defaultValues: {
-            author: '',
             title: '',
+            author: '',
             song: null,
             image: null,
         }
@@ -96,7 +96,7 @@ const UploadModal = () => {
             .insert({
                 user_id: user.id,
                 title: values.title,
-                author: values.title,
+                author: values.author,
                 image_path: imageData.path,
                 song_path: songData.path,
             });
